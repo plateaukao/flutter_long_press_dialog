@@ -76,14 +76,18 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  // create a tile widget from image url
   Widget _createGridTileWidget(String url) => Builder(
-        // use Builder to show the snakbar
+        // use Builder here in order to show the snakbar
         builder: (context) => GestureDetector(
+          // keep the OverlayEntry instance, and insert it into Overlay
           onLongPress: () {
             _popupDialog = _createPopupDialog(url);
             Overlay.of(context).insert(_popupDialog);
           },
+          // remove the OverlayEntry from Overlay, so it would be hidden
           onLongPressEnd: (details) => _popupDialog?.remove(),
+
           onTap: () => Scaffold.of(context).showSnackBar(snackBar),
           child: Image.network(url, fit: BoxFit.cover),
         ),
@@ -97,6 +101,11 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  // this is the main popup dialog content, which includes:
+  // 1. a container with border radius
+  // 2. a title bar
+  // 3. a larger image in the middle
+  // 4. a bottom action bar
   Widget _createPopupContent(String url) => Container(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: ClipRRect(
@@ -142,6 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
 }
 
+// This a widget to implement the image scale animation, and background grey out effect.
 class AnimatedDialog extends StatefulWidget {
   const AnimatedDialog({Key key, this.child}) : super(key: key);
 
