@@ -1,16 +1,11 @@
-# flutter_long_press_dialog
+# flutter application that demonstrate long press popup dialog like instagram
 
 A Flutter application to demonstrate the long press popup dialog.
 
-## Getting Started
+## Demo
+![](gif/demo.gif)
 
-This project is a starting point for a Flutter application.
+## Artile
+[Implementation of Instagram-like Long Press popup Dialog in Flutter](https://medium.com/@danielkao/implementation-of-instagram-like-long-press-popup-dialog-in-flutter-25fd955fd38a?source=friends_link&sk=2281c90563b334010f1472615e26d73a) on Medium
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
